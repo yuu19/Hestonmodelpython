@@ -1,5 +1,5 @@
 import numpy as np
-from scipy.integrate import trapz
+from scipy.integrate import trapz #台形近似 https://showa-yojyo.github.io/notebook/python-scipy/integrate.html
 from HestonProbZeroSigma import HestonProbZeroSigma
 def HestonPriceZeroSigma(PutCall, kappa, theta, lambd, tau, K, S, r, q, Uphi, dphi, Lphi):
     
