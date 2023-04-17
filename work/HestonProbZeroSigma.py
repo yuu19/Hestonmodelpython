@@ -19,9 +19,10 @@ def HestonProbZeroSigma(phi, kappa, theta, lam, tau, K, S, r, q, Pnum):
     D = (u * 1j * phi - phi**2 / 2) * (1 - np.exp(-b * tau)) / b
     C = (r - q) * 1j * phi * tau + a * (u * 1j * phi - 0.5 * phi**2) / b * (tau - (1 - np.exp(-b * tau)) / b)
     
-    # The characteristic function.
+    # fは(1.48)式で与えられている                                                                                                                                                                                                                                                                                                                                                                                         he characteristic function.
     f = np.exp(C + D * theta + 1j * phi * x)
     
+    # (1.69)式の被積分関数
     # Return the real part of the integrand.
     y = np.real(np.exp(-1j * phi * np.log(K)) * f / 1j / phi)
     
