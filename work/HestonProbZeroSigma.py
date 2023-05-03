@@ -1,6 +1,6 @@
 import numpy as np
 
-def HestonProbZeroSigma(phi, kappa = 10, theta = 0.07, lam, tau, K = 10, S = 7, r = 0, q = 0, Pnum):
+def HestonProbZeroSigma(phi, kappa = 10, theta = 0.07, lam, tau, K = 10, S = 7, r = 0, q = 0, Pnum = 2):
     # Log of the stock price.
     x = np.log(S)
     
