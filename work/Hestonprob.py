@@ -48,8 +48,8 @@ def  HestonProb(phi,kappa,theta,lam,rho,sigma,tau,K,S,r,q,v0,Pnum,Trap):
   elif Trap==0:
 	# Original Heston formulation.
     G = (1 - g*np.exp(d*tau))/(1-g)
-    C = (r-q)*1j*phi*tau + a/sigma**2*((b - rho*sigma*i*phi + d)*tau - 2*np.log(G))
-    D = (b - rho*sigma*i*phi + d)/sigma**2*((1-np.exp(d*tau))/(1-g*np.exp(d*tau)))
+    C = (r-q)*1j*phi*tau + a/sigma**2*((b - rho*sigma*1j*phi + d)*tau - 2*np.log(G))
+    D = (b - rho*sigma*1j*phi + d)/sigma**2*((1-np.exp(d*tau))/(1-g*np.exp(d*tau)))
 
 
 # The characteristic function.
